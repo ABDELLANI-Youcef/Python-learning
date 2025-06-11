@@ -1,0 +1,12 @@
+scores = [100, 99, 25, 44, 85, 77, 64]
+print("Scores:", scores)
+print("Length of scores:", len(scores))
+print("First score:", scores[0])
+print("Last score:", scores[-1])
+print("First three scores:", scores[:3])
+print("Last three scores:", scores[-3:])
+print("Scores from index 2 to 5:", scores[2:6])
+print("Scores from index 2 to end:", scores[2:])
+print("Scores from start to index 4 step 2:", scores[:4:2])
+print("Scores from start to end step 2:", scores[::2])
+print("Scores in reverse order:", scores[::-1])
