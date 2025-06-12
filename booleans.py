@@ -56,3 +56,13 @@ elif age >= 65 is not True:
     print("You are an adult.")
 else:
     print("You are a senior citizen.")
+
+# ternary operator with multiple conditions
+is_adult = "You are an adult." if age >= 18 else "You are a minor."
+print(is_adult)
+# Using the ternary operator with multiple conditions
+is_adult = "You are an adult." if age >= 18 else "You are a senior citizen." if age >= 65 else "You are a minor."
+print(is_adult)
+# Using the ternary operator with multiple conditions and logical operators
+is_adult = "You are an adult." if age >= 18 and age < 65 else "You are a senior citizen." if age >= 65 else "You are a minor."
+print(is_adult)
