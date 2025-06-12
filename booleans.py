@@ -27,3 +27,32 @@ if None: print("None is falsy")
 if not None: print("None is falsy")
 if True: print("True is truthy")
 if False: print("False is falsy")
+
+# conditionnal
+
+age = int(input("Enter your age please: "))
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+
+# Ternary operator
+is_adult = "You are an adult." if age >= 18 else "You are a minor."
+print(is_adult)
+
+if age >= 18 and age < 65:
+    print("You are an adult.")
+elif age >= 65:
+    print("You are a senior citizen.")
+else:
+    print("You are a minor.")
+
+if age < 18 or age >= 65:
+    print("You are either a minor or a senior citizen.")
+
+if age < 18 is True:
+    print("You are a minor.")
+elif age >= 65 is not True:
+    print("You are an adult.")
+else:
+    print("You are a senior citizen.")
