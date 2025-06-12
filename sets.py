@@ -32,18 +32,21 @@ print("Symmetric difference of set_one and set_two:", symmetric_difference)
 frozen_ingredients = frozenset(ingredients)  # Creating a frozen set
 print("Frozen ingredients:", frozen_ingredients)
 # Attempting to add an element to a frozen set will raise an error
+
+'''
 try:
-    frozen_ingredients.add(200)  # This will raise an error
+     frozen_ingredients.add(200) ======>  # This will raise an error
 except AttributeError as e:
     print("Error:", e)
 # Attempting to remove an element from a frozen set will also raise an error
 try:
-    frozen_ingredients.remove(12)  # This will raise an error
+     frozen_ingredients.remove(12) =====> # This will raise an error
 except AttributeError as e:
     print("Error:", e)
 # Attempting to discard an element from a frozen set will also raise an error
 try:
-    frozen_ingredients.discard(12)  # This will raise an error
+    frozen_ingredients.discard(12) ======>  # This will raise an error
 except AttributeError as e:
     print("Error:", e)
 # Attempting to create a frozen set from a mutable type will raise an error
+'''
