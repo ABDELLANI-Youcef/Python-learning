@@ -1,6 +1,7 @@
 class Developer:
   developers_count = 0 # thisis a static variable shared by all instances
 
+  #constructor
   def __init__(self, name, languege, experience):
     self.name = name
     self.languege = languege
@@ -21,6 +22,17 @@ class Developer:
       return "Mid-level Developer"
     else:
       return "Senior Developer"
+
+class SeniorDeveloper(Developer):
+  def __init__(self, name, language, experience, company):
+    super().__init__(name, language, experience)
+    self.company = company
+
+  def into(self):
+    return f"{super().into()}, Company: {self.company}"
+
+  def anounce(self):
+    return f"{self.name} is a Senior Developer at {self.company} with {self.experience} years of experience in {self.languege}."
 
 def main():
   youcef = Developer("Youcef", "Python", 5)
@@ -45,6 +57,13 @@ def main():
   email = ("youcefabdellani@gmail.com", "fefe")
 
   for e in email: print(f"{e} is a {"valid" if Developer.validate_email(e) else "invalid"} email")
+
+  super_developer = SeniorDeveloper("Super Youcef", "Python", 10, "Groups360")
+
+  print(f"this is an into for {super_developer.name}:\n{super_developer.into()}")
+
+  print(super_developer.anounce())
+
   return
 
 if __name__ == "__main__":
