@@ -1,6 +1,6 @@
 class Developer:
-  def __init__(self, nale, languege, experience):
-    self.name = nale
+  def __init__(self, name, languege, experience):
+    self.name = name
     self.languege = languege
     self.experience = experience
 
