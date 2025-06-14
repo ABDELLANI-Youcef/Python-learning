@@ -7,6 +7,14 @@ class Developer:
   def into(self):
     return f"Name: {self.name}, Language: {self.languege}, Experience: {self.experience} years"
 
+  def evaluate(self, compared_to):
+    if self.experience < compared_to:
+      return "Junior Developer"
+    elif compared_to <= self.experience < compared_to +10:
+      return "Mid-level Developer"
+    else:
+      return "Senior Developer"
+
 def main():
   youcef = Developer("Youcef", "Python", 5)
   print(youcef.into())
@@ -15,6 +23,8 @@ def main():
 
   youcef.experience = 11
   print(f"Nom, after 6 years {youcef.name} is a developer with {youcef.experience} years of experience in {youcef.languege}.")
+
+  print(f"{youcef.name} is a {youcef.evaluate(5)} compared to a developer with 5 years of experience.\n")
 
   ahmed = Developer("Ahmed", "JavaScript", 3)
   print(ahmed.into())
