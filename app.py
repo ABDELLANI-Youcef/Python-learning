@@ -1,4 +1,4 @@
-from bottle import route, run, response
+from bottle import route, run, response, template
 
 countries = [
   {"name": "Algeria", "capital": "Algiers", "population": 43851044},
@@ -10,7 +10,7 @@ countries = [
 
 @route('/')
 def home():
-  return "Welcome to the API Project!"
+  return template('home', countries=countries)
 
 @route('/hello/<name>')
 def hello(name):
